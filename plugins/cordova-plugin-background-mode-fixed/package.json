@@ -1,0 +1,73 @@
+{
+  "_from": "cordova-plugin-background-mode-fixed",
+  "_id": "cordova-plugin-background-mode-fixed@0.7.6",
+  "_inBundle": false,
+  "_integrity": "sha512-AMeWMQKrD5ilJy1qaHipZqeby1GGQ+fsXlIhRBL5ENmQk7OkQ0zqOzllV9QejV+YHAVLSm/YbHhbU+ME4P4rQQ==",
+  "_location": "/cordova-plugin-background-mode-fixed",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-background-mode-fixed",
+    "name": "cordova-plugin-background-mode-fixed",
+    "escapedName": "cordova-plugin-background-mode-fixed",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-background-mode-fixed/-/cordova-plugin-background-mode-fixed-0.7.6.tgz",
+  "_shasum": "560410f2c477d947a4fcd274c038d3f4aa80a919",
+  "_spec": "cordova-plugin-background-mode-fixed",
+  "_where": "/home/aryan/Documents/project/bachaaoApp",
+  "author": {
+    "name": "Sebastián Katzer"
+  },
+  "bugs": {
+    "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-background-mode-fixed",
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ]
+  },
+  "deprecated": false,
+  "description": "Prevent apps from going to sleep in background. iOS fix.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    },
+    {
+      "name": "android-sdk",
+      "version": ">=16"
+    },
+    {
+      "name": "windows-sdk",
+      "version": ">=10.0.14393.0"
+    }
+  ],
+  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme",
+  "keywords": [
+    "appplant",
+    "background",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-browser"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-background-mode-fixed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katzer/cordova-plugin-background-mode.git"
+  },
+  "version": "0.7.6"
+}

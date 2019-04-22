@@ -7,18 +7,25 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
-    },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
     },
     "cordova-plugin-sms": {
       "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
     },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
+    },
     "cordova-sms-plugin": {
+      "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
+    },
+    "cordova-plugin-background-mode-fixed": {
       "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "org.geekygirls.bachaaoApp"
+    }
+  }
 }
