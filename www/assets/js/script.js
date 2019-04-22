@@ -50,14 +50,18 @@ function helpMe() {
 
 function eSMS() {
     getLocation();
-    current_location = localStorage.getItem("location");
-    message = "Help me ! My location is : " + current_location;
+    current_location = JSON.parse(localStorage.getItem("location"));
+    latitude = current_location["latitude"];
+    longitude = current_location["longitude"];
+    message = "Help me ! My location is : " + latitude+","+longitude;
     people_list = JSON.parse(localStorage["enumbers"]);
     for (i = 0; i < people_list.length; i++) {
         person = people_list[i];
         number = person["number"];
+        console.log("person: "+person);
+        console.log("number : "+number);
         sendSMS(number, message);
-        // console.log(number + message);
+        console.log(number + message);
     }
 
 }
@@ -69,13 +73,14 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(function(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
-            localStorage.location = longitude + "," + latitude;
-            x.innerHTML = longitude + "," + latitude;
+            localStorage.location = JSON.stringify({'longitude':longitude,'latitude':latitude});
+            x.innerHTML = latitude + "," + longitude;
         });
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+
 
 
 function addNumber() {
