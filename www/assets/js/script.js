@@ -12,16 +12,11 @@ function pushAlarm() {
 }
 
 function callPolice() {
-    location.href = ' tel:100;'
-        // alert("calling Police");
+    location.href = ' tel:100';
+    // alert("calling Police");
 
 }
 
-function eCall() {
-    location.href = 'tel://';
-    // alert("Call");
-
-}
 
 function sendSMS(number, message) {
     console.log("number=" + number + ", message= " + message);
@@ -44,7 +39,6 @@ function sendSMS(number, message) {
 function helpMe() {
     pushAlarm();
     callPolice();
-    eCall();
     eSMS();
 }
 
@@ -53,13 +47,13 @@ function eSMS() {
     current_location = JSON.parse(localStorage.getItem("location"));
     latitude = current_location["latitude"];
     longitude = current_location["longitude"];
-    message = "Help me ! My location is : " + latitude+","+longitude;
+    message = "Help me ! My location is : " + latitude + "," + longitude;
     people_list = JSON.parse(localStorage["enumbers"]);
     for (i = 0; i < people_list.length; i++) {
         person = people_list[i];
         number = person["number"];
-        console.log("person: "+person);
-        console.log("number : "+number);
+        console.log("person: " + person);
+        console.log("number : " + number);
         sendSMS(number, message);
         console.log(number + message);
     }
@@ -73,7 +67,7 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(function(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
-            localStorage.location = JSON.stringify({'longitude':longitude,'latitude':latitude});
+            localStorage.location = JSON.stringify({ 'longitude': longitude, 'latitude': latitude });
             x.innerHTML = latitude + "," + longitude;
         });
     } else {
