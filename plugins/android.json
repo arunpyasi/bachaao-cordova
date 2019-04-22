@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.indreni.bachaaoApp"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "org.indreni.bachaaoApp"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "org.indreni.bachaaoApp"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "org.indreni.bachaaoApp"
+    }
+  },
+  "dependent_plugins": {}
+}
