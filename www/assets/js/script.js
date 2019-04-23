@@ -49,13 +49,16 @@ function eSMS() {
     longitude = current_location["longitude"];
     message = "Help me ! My location is : " + latitude + "," + longitude;
     people_list = JSON.parse(localStorage["enumbers"]);
+    console.log(people_list);
     for (i = 0; i < people_list.length; i++) {
-        person = people_list[i];
-        number = person["number"];
-        console.log("person: " + person);
-        console.log("number : " + number);
-        sendSMS(number, message);
-        console.log(number + message);
+            person = people_list[i];
+            if(person !=null){
+            number = person["number"];
+            console.log("person: " + person);
+            console.log("number : " + number);
+            sendSMS(number, message);
+            console.log(number + message);
+        }
     }
 
 }
