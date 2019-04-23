@@ -45,6 +45,19 @@ function helpMe() {
 function eSMS() {
     getLocation();
     current_location = JSON.parse(localStorage.getItem("location"));
+    if(current_location ==null){
+        function alertDismissed() {
+            console.log("GPS location is not detected.")
+        }
+        
+        navigator.notification.alert(
+            'GPS location unknown',  // message
+            alertDismissed,         // callback
+            'Try again after few seconds',            // title
+            'Done'                  // buttonName
+        );
+        
+    }
     latitude = current_location["latitude"];
     longitude = current_location["longitude"];
     message = "Help me ! My location is : " + latitude + "," + longitude;
@@ -72,6 +85,7 @@ function getLocation() {
             var longitude = position.coords.longitude;
             localStorage.location = JSON.stringify({ 'longitude': longitude, 'latitude': latitude });
             x.innerHTML = latitude + "," + longitude;
+            console.log(latitude, longitude);
         });
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
